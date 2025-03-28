@@ -1,10 +1,14 @@
+# %%
 def max_et_indice(Liste):
-    max = Liste[0]
+    maxi = Liste[0]
+    indice = 0
     for i in range(len(Liste)):
-        if max < i:
-            
+        if maxi < Liste[i]:
+            indice = i
+            maxi = Liste[i]
+    return (maxi, indice)
 
-
+# %%
 
 def est_un_ordre(tab):
     '''
@@ -13,12 +17,12 @@ def est_un_ordre(tab):
     '''
     n = len(tab)
     # les entiers vus lors du parcours
-    vus = ... 
+    vus = []
 
     for x in tab:
-        if x < ... or x >... or ...: 
+        if x < 0 or x > n or x in vus: 
             return False
-        ... .append(...) 
+        vus.append(x) 
     return True
 
 def nombre_points_rupture(ordre):
@@ -27,10 +31,10 @@ def nombre_points_rupture(ordre):
     un ordre de gènes de chromosome
     '''
     # on vérifie que ordre est un ordre de gènes
-    assert ... 
+    assert est_un_ordre(ordre), "la liste n'est pas un ordre de gènes de chromosome"
     n = len(ordre)
     nb = 0
-    if ordre[...] != 1: # le premier n'est pas 1 
+    if ordre[0] != 1: # le premier n'est pas 1 
         nb = nb + 1
     i = 0
     while i < ...: 
@@ -42,3 +46,5 @@ def nombre_points_rupture(ordre):
     return nb
 
 
+
+# %%
