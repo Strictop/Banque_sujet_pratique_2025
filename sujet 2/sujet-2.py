@@ -37,14 +37,11 @@ def nombre_points_rupture(ordre):
     if ordre[0] != 1: # le premier n'est pas 1 
         nb = nb + 1
     i = 0
-    while i < ...: 
-        if ... not in [-1, 1]: # l'écart n'est pas 1 
+    while i < n-1 : 
+        if (ordre[i] - ordre[i+1]) not in [-1, 1]: # l'écart n'est pas 1 
             nb = nb + 1
         i = i + 1
-    if ordre[i] != ...: # le dernier n'est pas n 
+    if ordre[i] != n : # le dernier n'est pas n 
         nb = nb + 1
     return nb
 
-
-
-# %%
