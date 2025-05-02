@@ -1,6 +1,14 @@
+# %%
+
 def parcours_largeur(arbre):
-    liste = list()
-    liste.append(arbre[1])
+    if arbre != None :
+        (g, x, d) = arbre
+        return [x] + [parcours_largeur(g)] + [parcours_largeur(d)]
+
+
+
+arbre = ( ( (None, 1, None), 2, (None, 3, None) ),4,( (None, 5, None), 6, (None, 7, None) ) )        
+parcours_largeur(arbre)
     
 
 
@@ -9,7 +17,7 @@ def parcours_largeur(arbre):
 
 
 
-
+# %%
 def somme_max(tab):
     n = len(tab)
     sommes_max = [0]*n
