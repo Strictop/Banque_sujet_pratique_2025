@@ -1,14 +1,31 @@
 # %%
-
 def parcours_largeur(arbre):
-    if arbre != None :
-        (g, x, d) = arbre
-        return [x] + [parcours_largeur(g)] + [parcours_largeur(d)]
+    
+    
+    if arbre is None:
+        return []
+    
 
+    queue = list()
+    queue.append(arbre)
+    etiquette = []
 
+    while queue != []:
+        noeud = queue.pop(0)
+        etiquette.append(noeud[1])
 
-arbre = ( ( (None, 1, None), 2, (None, 3, None) ),4,( (None, 5, None), 6, (None, 7, None) ) )        
+        if noeud[0] != None:
+            queue.append(noeud[0])
+        if noeud[2] != None:
+            queue.append(noeud[2])
+    
+    return etiquette
+
+arbre = ( ( (None, 1, None), 2, (None, 3, None) ),4,( (None, 5, None), 6, (None, 7, None) ) )
 parcours_largeur(arbre)
+
+
+
     
 
 
