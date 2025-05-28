@@ -23,12 +23,11 @@ def chercher(tab, x, i, j):
         return None
     m = (i + j) // 2 
     if tab[m] < x: 
-        return chercher(tab, x, i , m-1) 
-    elif tab[m] > x:
         return chercher(tab, x, m+1 , j) 
+    elif tab[m] > x:
+        return chercher(tab, x, i , m-1) 
     else:
         return m 
-
 
 
 # %%
