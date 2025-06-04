@@ -39,5 +39,3 @@ def vainqueurs(election):
     return liste_finale
 
 
-
-# %%
