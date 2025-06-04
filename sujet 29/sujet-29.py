@@ -2,7 +2,7 @@
 
 def selection_enclos(animaux : list, num_enclos : int) -> list:
     '''
-    
+    Bla bla bla, bleh bleh bleh, blu blu blu
     '''
     result = list()
     for dico in animaux:
@@ -12,6 +12,7 @@ def selection_enclos(animaux : list, num_enclos : int) -> list:
 
 
 # %%
+
 def trouver_intrus(tab, g, d):
     """Renvoie la valeur de l'intrus situé entre les indices g et d 
     dans le tableau tab où :
@@ -23,9 +24,9 @@ def trouver_intrus(tab, g, d):
         nombre_de_triplets = (d - g) // 3
         indice = g + 3 * (nombre_de_triplets // 2)
         if tab[indice] == tab[indice+1]: 
-            return trouver_intrus(tab, g, d) 
+            return trouver_intrus(tab, indice+3, d) 
         else:
-            return trouver_intrus(tab, g, d) 
+            return trouver_intrus(tab, g, indice) 
 
 
 
