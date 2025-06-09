@@ -1,3 +1,16 @@
+#%%
+
+# Exercice 1
+
+def max_et_indice(tab):
+    m = 0 
+    for i in range(1, len(tab)):
+        if tab[i] > tab[m]:
+            m = i
+    return tab[m],m
+max_et_indice([1, 5, 6, 9, 1, 2, 3, 7, 9, 8])
+
+
 def est_un_ordre(tab):
     '''
     Renvoie True si tab est de longueur n et contient tous les
@@ -5,12 +18,12 @@ def est_un_ordre(tab):
     '''
     n = len(tab)
     # les entiers vus lors du parcours
-    vus = ... 
+    vus = []
 
     for x in tab:
-        if x < ... or x >... or ...: 
+        if x < 1 or x > n or x in vus: 
             return False
-        ... .append(...) 
+        vus.append(x) 
     return True
 
 def nombre_points_rupture(ordre):
@@ -34,3 +47,5 @@ def nombre_points_rupture(ordre):
     return nb
 
 
+
+# %%
