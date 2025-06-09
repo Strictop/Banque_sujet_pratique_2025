@@ -1,3 +1,15 @@
+#%%
+def nbr_occurences(chaine):
+    compteur = {}
+    for c in chaine:
+        if c not in compteur:
+            compteur[c] = 1
+        else:
+            compteur[c] += 1
+    return compteur
+
+
+#%%
 def fusion(tab1,tab2):
     '''Fusionne deux tableaux triés et renvoie
     le nouveau tableau trié.'''
@@ -7,22 +19,24 @@ def fusion(tab1,tab2):
     i1 = 0
     i2 = 0
     i = 0
-    while i1 < n1 and ...: 
+    while i1 < n1 and i2 < n2: 
         if tab1[i1] < tab2[i2]:
-            tab12[i] = ... 
-            i1 = ... 
+            tab12[i] = tab1[i1]
+            i1 = i1 + 1 
         else:
             tab12[i] = tab2[i2]
-            i2 = ... 
+            i2 = i2 + 1 
         i += 1
     while i1 < n1:
-        tab12[i] = ... 
+        tab12[i] = tab1[i1]
         i1 = i1 + 1
-        i = ... 
+        i += 1
     while i2 < n2:
-        tab12[i] = ... 
+        tab12[i] = tab1[i1]
         i2 = i2 + 1
-        i = ... 
+        i += 1
     return tab12
+fusion([1,2,3],[])
 
 
+# %%
